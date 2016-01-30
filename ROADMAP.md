@@ -18,7 +18,7 @@ The roadmap focuses on five separate things
 
  - New class system:
    - **[definite]** with no global side-effects (i.e. the class constructor should be scoped into its parent package)
-     Get rid of every statement/system that has a global effect on the environement (torch.setdefaultensortype => dangerous and not clean)
+     Get rid of every statement/system that has a global effect on the environment (torch.setdefaultensortype => dangerous and not clean)
    - **[needs discussion]** fully serializable (i.e. when deserializing/reloading a model, there shouldn't be a need to load libraries that defined the class originally, like nn; the class definition should be serialized as well: this would remove a lot of backward compatibilty hacks that we have to add to class definitions currently
        - **koray**: I like this, but wouldn't it break backward compatibility?
 		            Currently, whatever we serialize, it is just the data and implementation is defined
